@@ -5832,14 +5832,13 @@ const core = __importStar(__webpack_require__(470));
 const exec_1 = __webpack_require__(986);
 const process = __importStar(__webpack_require__(765));
 const fs = __importStar(__webpack_require__(747));
-const path = __importStar(__webpack_require__(622));
 const restm = __importStar(__webpack_require__(105));
 const github = __webpack_require__(469);
 const stack = core.getInput('stack', { required: true });
 const args = core.getInput('args', { required: true });
 const root = core.getInput('root');
 if (root) {
-    process.chdir(path.join(process.cwd(), root));
+    process.chdir(root);
 }
 const workflow = github.context.workflow;
 if (workflow) {
