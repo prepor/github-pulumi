@@ -1,5 +1,5 @@
 name: 'Pulumi'
-description: 'Pulumi wrapper'
+description: 'Pulumi runner (non official)'
 inputs:
   stack:
     description: 'Pulumi Stack to working with'

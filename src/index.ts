@@ -2,6 +2,7 @@ import * as core from '@actions/core';
 import { exec } from '@actions/exec';
 import * as process from 'process'
 import * as fs from 'fs'
+import * as path from 'path'
 import * as restm from 'typed-rest-client/RestClient';
 
 const github = require('@actions/github');
@@ -10,7 +11,7 @@ const stack = core.getInput('stack', { required: true })
 const args = core.getInput('args', { required: true })
 const root = core.getInput('root')
 if (root) {
-    process.chdir(root)
+    process.chdir(path.join(process.cwd(), root))
 }
 
 const workflow = github.context.workflow
