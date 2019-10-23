@@ -1,0 +1,8 @@
+{
+    "name": "javascript",
+    "main": "index.js",
+    "dependencies": {
+        "@pulumi/pulumi": "^1.0.0",
+        "@pulumi/random": "^1.1.0"
+    }
+}
