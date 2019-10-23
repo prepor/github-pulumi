@@ -19,6 +19,7 @@ jobs:
         mode: pr
         root: example
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        comment-on-pr: true
       env:
         PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
         
