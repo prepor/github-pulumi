@@ -1,4 +1,4 @@
-name: 'Pulumi'
+name: 'Pulumi runner'
 description: 'Pulumi runner (non official)'
 inputs:
   stack:
