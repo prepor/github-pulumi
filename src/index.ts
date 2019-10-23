@@ -27,6 +27,7 @@ const mode = core.getInput('mode')
 
 switch (mode) {
     case 'pr':
+        core.exportVariable("PULUMI_CI", "pr")
         if (!['opened', 'edited', 'synchronize'].includes(github.context.payload.action as string)) {
             core.info(`PR event ${github.context.payload.action} contains no changes and does not warrant a Pulumi Preview`)
             core.info("Skipping Pulumi action altogether...")
