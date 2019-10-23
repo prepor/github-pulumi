@@ -1,0 +1,21 @@
+{
+  "name": "github-action-pulumi",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "pack": "ncc build dist/index.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2",
+    "@actions/exec": "^1.0.1",
+    "@actions/github": "^1.1.0",
+    "@actions/io": "^1.0.1",
+    "typed-rest-client": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.5",
+    "@zeit/ncc": "^0.20.5",
+    "typescript": "^3.6.4"
+  }
+}

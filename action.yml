@@ -1,0 +1,23 @@
+name: 'Pulumi'
+description: 'Pulumi wrapper'
+inputs:
+  stack:
+    description: 'Pulumi Stack to working with'
+    required: true
+  args:
+    description: 'pulumi args to run with'
+    required: true
+  mode:
+    description: 'Supported values: pr & up'
+  root:
+    description: "Pulumi's root path"
+  comment-on-pr:
+    description: "Leave a comment for PRs"
+  github-token:
+    description: "Github Token"
+branding:
+  icon: 'gift'
+  color: 'blue'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
