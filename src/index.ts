@@ -56,7 +56,7 @@ async function run() {
                 core.info(s)
             },
             stderr: (data: Buffer) => {
-                core.error(data.toString())
+                core.warning(data.toString())
             }
         },
         ignoreReturnCode: true
