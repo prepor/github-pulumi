@@ -25,9 +25,14 @@ jobs:
     - uses: prepor/github-pulumi@master
       with:
         stack: dev
-        args: up
+        args: upPULUMI_SKIP_CONFIRMATIONS: 'true'
         root: example
         github-token: ${{ secrets.GITHUB_TOKEN }}
       env:
         PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
+
+### Pulumi v2 
+
+If you are using v2 of the CLI, please make sure to add an `PULUMI_SKIP_CONFIRMATIONS: 'true'` to your `env` section (Otherwise, `up` command will fail).
+
