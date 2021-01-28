@@ -25,7 +25,7 @@ jobs:
     - uses: prepor/github-pulumi@master
       with:
         stack: dev
-        args: upPULUMI_SKIP_CONFIRMATIONS: 'true'
+        args: up
         root: example
         github-token: ${{ secrets.GITHUB_TOKEN }}
       env:
