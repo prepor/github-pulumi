@@ -66,7 +66,8 @@ async function run() {
     const exitCode = await exec(cmd, undefined, options)
     // # If the GitHub action stems from a Pull Request event, we may optionally
     // # leave a comment if the COMMENT_ON_PR is set.
-    if (github.context.payload.pull_request && core.getInput('comment-on-pr')) {
+    const commentOnPr = core.getInput('comment-on-pr') === 'true'
+    if (github.context.payload.pull_request && commentOnPr) {
         let commentsUrl = github.context.payload.pull_request.comments_url as string
         let token = core.getInput('github-token')
         if (!token) {
